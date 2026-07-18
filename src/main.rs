@@ -18,6 +18,20 @@ impl EventHandler for Handler {
         let message: &str = &msg.content;
         if message.starts_with(".") {
             match &message[1..] {
+                "help" => {
+                    let _ = msg
+                        .channel_id
+                        .say(
+                            &ctx.http,
+                            "\
+                                List of commands :3c
+                            - .ping -> pings server
+                            - .coinflip -> does a coinflip :3
+                            - .cat -> returns random picture of a cat :3
+                                (also bot will meow back if you meow at it :3)",
+                        )
+                        .await;
+                }
                 "ping" => {
                     // start the timer
                     let start_time = Instant::now();
@@ -56,6 +70,13 @@ impl EventHandler for Handler {
                         .say(&ctx.http, "Wish me luck :3 ~ Energy out")
                         .await
                         .expect("Didn't send the message, no hackclub?");
+                }
+                "cat" => {
+                    let randlink = format!("https://cataas.com/cat?a={}", rand::random::<u64>());
+                    msg.channel_id
+                        .say(&ctx.http, randlink)
+                        .await
+                        .expect("didnt send cat message");
                 }
                 _ => {}
             }
