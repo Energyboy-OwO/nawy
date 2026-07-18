@@ -50,6 +50,14 @@ impl EventHandler for Handler {
                 .say(&ctx.http, "Wish me luck :3 ~ Energy out")
                 .await;
         }
+
+        // automeower :3
+        // meow list :p
+        let meows = vec!["meow", "nya", "mrrrp", "prrr"];
+        // the thing that checks if message is meowing :3
+        if meows.iter().any(|e| msg.content.contains(e)) {
+            let _ = msg.channel_id.say(&ctx.http, "miauuu:3c").await;
+        }
     }
 
     async fn ready(&self, _: Context, ready: Ready) {
