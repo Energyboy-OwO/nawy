@@ -11,9 +11,18 @@ And also will submit this project to hackclub stardance cuz why not :3
 []  time (tells time, what'd you expect :p)
 []  kick (get em out)
 []  ban (get em out permanently)
-[]  meow (meows at you when you meow)
+[x]  meow (meows at you when you meow)
 # how to run
 ```
 cargo run
 ```
 its as shrimple as that :3c
+
+
+# What helped me:
+- https://doc.rust-lang.org/book/
+- https://rust-book.cs.brown.edu
+- https://users.rust-lang.org/t/how-to-check-if-string-exists-in-a-vec/63180
+- https://www.koderhq.com/tutorial/rust/vector/#:~:text=We%20can%20check%20if%20a,using%20the%20contains()%20method.
+
+and most importantly my girlfriend and future wife glitchy :p https://gayboi.club/glitchy

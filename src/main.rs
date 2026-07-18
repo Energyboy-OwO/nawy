@@ -54,9 +54,13 @@ impl EventHandler for Handler {
         // automeower :3
         // meow list :p
         let meows = vec!["meow", "nya", "mrrrp", "prrr"];
-        // the thing that checks if message is meowing :3
-        if meows.iter().any(|e| msg.content.contains(e)) {
-            let _ = msg.channel_id.say(&ctx.http, "miauuu:3c").await;
+
+        if msg.author.id == 1527332908287656036 {
+        } else {
+            // the thing that checks if message is meowing :3
+            if meows.iter().any(|e| msg.content.contains(e)) {
+                let _ = msg.channel_id.say(&ctx.http, "meow:3c").await;
+            }
         }
     }
 
