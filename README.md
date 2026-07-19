@@ -9,7 +9,7 @@ And also will submit this project to hackclub stardance cuz why not :3
 # Feature list:
 - [x] ping (no bot will be complete without a ping command)
 - [x] coinflip (we love flipping coins to decide on things)
-- [ ]  time (tells time, what'd you expect :p)
+- [x]  time (tells time, what'd you expect :p)
 - [ ]  kick (get em out)
 - [ ]  ban (get em out permanently)
 - [x] meow (meows at you when you meow)
@@ -34,6 +34,10 @@ its as shrimple as that :3c
 - https://users.rust-lang.org/t/how-to-check-if-string-exists-in-a-vec/63180
 
 - https://www.koderhq.com/tutorial/rust/vector/#:~:text=We%20can%20check%20if%20a,using%20the%20contains()%20method.
+
+- https://gist.github.com/LeviSnoot/d9147767abeef2f770e9ddcd91eb85aa
+
+- https://gist.github.com/jweinst1/0f0f2e9e31e487469e5367d42ad29253
 
 and most importantly my girlfriend and future wife glitchy :p https://gayboi.club/glitchy
 

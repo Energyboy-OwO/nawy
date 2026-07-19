@@ -2,7 +2,6 @@
 // my first attempt at a discord bot written in rust, lord save us all
 
 // imports :3
-use chrono::{self, Local};
 use serenity::async_trait;
 use serenity::builder::EditMessage; // Required for Serenity v0.12+
 use serenity::model::channel::Message;
@@ -10,8 +9,8 @@ use serenity::model::gateway::Ready;
 use serenity::prelude::*;
 use std::env;
 use std::time::Instant;
-
 struct Handler;
+use std::time::SystemTime;
 
 #[async_trait]
 // implementation of event handler so when message contents == something -> then something happens
@@ -89,8 +88,11 @@ impl EventHandler for Handler {
         }
 
         if msg.content == ".time" {
-            let timenow = Local::now();
-            let timemsg = format!("The curent time is {}", timenow);
+            let timenow = match SystemTime::now().duration_since(SystemTime::UNIX_EPOCH) {
+                Ok(n) => n.as_secs(),
+                Err(_) => panic!("SystemTime before UNIX EPOCH!"),
+            };
+            let timemsg = format!("The curent time is <t:{}>", timenow);
             let _ = msg.channel_id.say(&ctx.http, timemsg).await;
         }
     }
