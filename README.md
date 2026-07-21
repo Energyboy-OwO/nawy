@@ -24,6 +24,15 @@ cargo run
 ```
 its as shrimple as that :3c
 
+# how to use it
+the bot uses . as it's prefix, all commands start with it other than automeower which gets triggered by any meow
+List of commands :3c
+- .ping -> pings server
+- .coinflip -> does a coinflip :3
+- .cat -> returns random picture of a cat :3
+- meow -> bot will meow back :3
+- time -> tells the current time :3
+
 
 # What helped me:
 - https://doc.rust-lang.org/book/
